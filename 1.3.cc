@@ -4,14 +4,9 @@ using namespace std;
 
 
 bool test_if_permutation(char* str_1, char* str_2) {
-     int counter[256];
-     int index;
+     int counter[256] = {0};
+     int index = 0;
 
-     for(int i=0; i<256; i++) {
-         counter[i] = 0;
-     }
-
-     index = 0;
      while(true) {
          char c = str_1[index];
          if (c == '\0') {

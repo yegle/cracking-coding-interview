@@ -3,21 +3,18 @@
 using namespace std;
 
 bool has_all_unique_characters(char* str) {
-    bool buf[256];
-    for(int i=0; i<256; i++) {
-        buf[i] = false;
-    }
+    int buf[256] = {0};
 
     int i = 0;
     while(true) {
-        char c = str[i];
-        if(c == '\0') {
+        auto c = str[i];
+        if (c == '\0') {
             break;
         }
-        if(buf[c]) {
+        if (buf[c]) {
             return false;
         } else {
-            buf[c] = true;
+            buf[c] = 1;
         }
 
         i++;
